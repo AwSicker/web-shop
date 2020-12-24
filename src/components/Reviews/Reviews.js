@@ -29,9 +29,9 @@ const ReviewsComponent = ({reviews}) => {
             <div className="reviews__form">
                 <form>
                     <Rate defaultValue={0}/>
-                    <Input placeholder="Leave your review here" maxLength={100}/>
+                    <Input placeholder="Leave your review here" maxLength={30}/>
                     <div className="reviews__submit">
-                        <p className="reviews__help">To submit review please make sure to set rating and describe your stay with at least 100 characters.</p>
+                        <p className="reviews__help">To submit review please make sure to set rating and describe your stay with at least 30 characters.</p>
                         <Button type="primary">Send</Button>
                     </div>
                 </form>
