@@ -5,12 +5,6 @@
   flex-direction: column;
  }
 
- .reviews__form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
- }
-
  .reviews__help {
   width: 402px;
   margin-top: 8px;
@@ -42,17 +36,33 @@
  }
 
  .reviews__list {
-  margin: 0;
   padding: 0;
   list-style: none;
+  margin-bottom: 50px;
  }
 
  .review__item {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
   margin-bottom: 22px;
+  justify-content: center;
+  background-color: rgb(240, 240, 240);
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
  }
+
+ .ant-layout-content.site-layout {
+  margin-left: auto;
+  margin-right : auto;
+ }
+
+ .review__item--grade {
+  margin-left: 50px;
+ }
+
 }
 
-
+.ant-rate-star-first, .ant-rate-star-second {
+ color: rgb(220, 222, 220);
+}

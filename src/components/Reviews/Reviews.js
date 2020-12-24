@@ -6,7 +6,6 @@ import Review from "../Review/Review";
 
 
 const ReviewsComponent = ({reviews}) => {
-    console.log(reviews);
     const {Content} = Layout;
     return (
         <div className="reviews">
@@ -29,7 +28,7 @@ const ReviewsComponent = ({reviews}) => {
                </div>
             <div className="reviews__form">
                 <form>
-                    <Rate defaultValue={5}/>
+                    <Rate defaultValue={0}/>
                     <Input placeholder="Leave your review here" maxLength={100}/>
                     <div className="reviews__submit">
                         <p className="reviews__help">To submit review please make sure to set rating and describe your stay with at least 100 characters.</p>
