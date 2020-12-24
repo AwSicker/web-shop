@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
 import {Col, Row} from 'antd';
-import './styles.css';
 import {ItemCard} from "../ItemCard";
 import {Sorting} from "../Sorting";
 

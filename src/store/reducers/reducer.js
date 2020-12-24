@@ -1,6 +1,6 @@
 import {mocks} from "../../mocks/mocks";
 import {ActionType} from "../actions/actions";
-import {FilterTypes, sortItems} from "../../utils/utils";
+import {FilterTypes, sortItemsByPrice} from "../../utils/utils";
 
 const initialState = {
     items: mocks,
@@ -14,7 +14,7 @@ export const reducer = (state = initialState, {type, payload}) => {
         case ActionType.SORT_ITEMS:
             return {...state,
                 filter: payload.filter,
-                items: sortItems(payload.filter, state.items)}
+                items: sortItemsByPrice(payload.filter, state.items)}
 
         default:
             return state;

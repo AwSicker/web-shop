@@ -10,7 +10,7 @@ export const FilterTypes = {
     PRICE_LOW_TO_HIGH : "PRICE_LOW_TO_HIGH"
 }
 
-export const sortItems = (filter, items) => {
+export const sortItemsByPrice = (filter, items) => {
 switch (filter) {
     case FilterTypes.PRICE_HIGH_TO_LOW:
         return items.slice().sort((a, b) => b.price - a.price);

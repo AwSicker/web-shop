@@ -1,11 +1,10 @@
 import React from 'react';
-import './styles.css';
 import {connect} from "react-redux";
-import {selectOfferById} from "../utils/utils";
+import {selectOfferById} from "../../utils/utils";
 import {compose} from "redux";
 import {withRouter} from "react-router-dom";
 import {Layout} from "antd";
-import {Footer, Header} from "../components/layout";
+import {Footer, Header} from "../layout";
 
 
 export const ItemDetailsComponent = ({item}) => {
