@@ -48,3 +48,24 @@ export const mocks = [
         price: 130
     },
 ]
+
+export const reviews = [
+    {
+        id: 90,
+        author: "Anastasia Si.",
+        message: "Best quality, well done!",
+        stars: 5
+    },
+    {
+        id: 91,
+        author: "Sonna Bi.",
+        message: "Good",
+        stars: 4
+    },
+    {
+        id: 92,
+        author: "Crystal Li.",
+        message: "Super",
+        stars: 5
+    },
+]

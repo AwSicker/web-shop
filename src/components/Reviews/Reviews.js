@@ -1,8 +1,12 @@
 import React from 'react';
+import {connect} from "react-redux";
 import {Button, Input, Layout, Rate} from "antd";
 import {Footer, Header} from "../layout";
+import Review from "../Review/Review";
 
-export const Reviews = () => {
+
+const ReviewsComponent = ({reviews}) => {
+    console.log(reviews);
     const {Content} = Layout;
     return (
         <div className="reviews">
@@ -10,7 +14,19 @@ export const Reviews = () => {
             <Header/>
             <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
                 <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
-
+               <div>
+                   <h2>Reviews {reviews.length}</h2>
+                   <ul className="reviews__list">
+                       {reviews.map((review) => {
+                           return(
+                           <Review
+                           key={review.id}
+                           review={review}
+                           />
+                           )
+                       })}
+                   </ul>
+               </div>
             <div className="reviews__form">
                 <form>
                     <Rate defaultValue={5}/>
@@ -21,7 +37,6 @@ export const Reviews = () => {
                     </div>
                 </form>
             </div>
-                    <p>REVIEWS ....</p>
                 </div>
             </Content>
             <Footer/>
@@ -29,3 +44,9 @@ export const Reviews = () => {
         </div>
     );
 };
+
+const mapStateToProps = (state) => ({
+   reviews: state.reviews
+});
+
+export const Reviews = connect(mapStateToProps)(ReviewsComponent);
