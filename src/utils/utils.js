@@ -6,8 +6,8 @@ export const selectOfferById = (state, id) => {
 
 
 export const FilterTypes = {
-    PRICE_HIGH_TO_LOW: "PRICE_HIGH_TO_LOW",
-    PRICE_LOW_TO_HIGH : "PRICE_LOW_TO_HIGH"
+    PRICE_HIGH_TO_LOW: "Price: high to low",
+    PRICE_LOW_TO_HIGH : "Price: low to high"
 }
 
 export const sortItemsByPrice = (filter, items) => {
